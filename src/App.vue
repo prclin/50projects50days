@@ -1,6 +1,7 @@
 <script setup>
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter} from 'vue-router'
 const router = useRouter()
+const routes = router.getRoutes()
 function to(key){
   router.push(key)
 }
@@ -10,7 +11,7 @@ function to(key){
     <a-layout>
       <a-layout-sider width="100" style="height: 100vh;" >
         <a-menu @menu-item-click="to">
-          <a-menu-item key="/expanding-cards">ExpandingCards</a-menu-item>
+          <a-menu-item v-for="item in routes" :key="item.path">{{item.name}}</a-menu-item>
         </a-menu>
       </a-layout-sider >
       <a-layout-content style="display:flex;justify-content: center;align-items: center;">
@@ -29,5 +30,7 @@ function to(key){
 }
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 </style>
