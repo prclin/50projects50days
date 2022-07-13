@@ -66,7 +66,7 @@
   </div>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 
   @inactive-color : #e0e0e0;
   @active-color : #3498db;
@@ -87,7 +87,7 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      z-index: -1;
+      z-index: 1;
     }
   }
 
@@ -114,7 +114,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    z-index: -1;
+    z-index: 1;
     transition: all 0.3s ease;
   }
 

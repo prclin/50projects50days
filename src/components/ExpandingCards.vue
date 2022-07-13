@@ -35,7 +35,7 @@
     
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
 
     .expanding-cards{
         height: 80vh;
